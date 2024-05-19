@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+body {
+    background: #081b29;
+    color: #ededed;
+}
+
+
+.aboutImg {
+    display: flex;
+    justify-content: left;
+    margin-left: 120px;
+    margin-top: 180px;
+
+}
+
+.aboutImg img {
+    border-radius: 30%;
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    box-shadow: 0 0 30px #00abf0;
+}
+
+.about {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 1.5rem;
+    line-height: 1.5;
+}
+
+.aboutText h2 {
+    font-size: 60px;
+
+}
+
+.aboutText h2 span {
+    color: #00abf0;
+}
+
+.aboutText h4 {
+    font-size: 29px;
+    font-weight: 600;
+    color: #ededed;
+    line-height: 1.7;
+    margin: 15px 0 30px;
+}
+
+.aboutText p {
+    color: aliceblue;
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 4rem;
+}
+
+.aboutText .btn-box {
+    position: relative;
+    display: inline-flex;
+    width: 150px;
+    height: 70px;
+    padding-left: 17px;
+    padding-bottom: 20px;
+    padding-top: 19px;
+    text-align: center;
+    background: #00abf0;
+    border: 2px solid #00abf0;
+    border-radius: 7px;
+    font-size: 19px;
+    color: #081b29;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+    overflow: hidden;
+}
+
+.about .btn-box:hover {
+    color: #00abf0;
+    box-shadow: 0 0 20px #00abf0;
+}
+
+    </style>
+</head>
+<body>
+    <form action="index.html" class="abouts">
+        <section class="about" id="abouts">
+            <div class="aboutImg">
+                <img src="profile.jpg" alt="image">
+            </div>
+            <div class="aboutText">
+                <h2><span>A</span>bout <span>M</span>e</h2>
+                <h4>FullStack Web Developer</h4>
+                <p>As a passionate and newly-trained full-stack web
+                    developer, I bring a fresh perspective and a hunger
+                    for learning to every project. While I may lack
+                    professional experience, my rigorous training and
+                    dedication equip me with the skills needed to
+                    tackle challenges head-on and deliver innovative solutions.
+                </p>
+                <a href="index.html" class="btn-box">Goto-Home</a>
+            </div>
+        </section>
+    </form>
+</body>
+</html>

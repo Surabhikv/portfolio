@@ -1,0 +1,713 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+body {
+    background: #081b29;
+    color: #ededed;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: #00abf0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    position: relative;
+    font-size: 25px;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: default;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+}
+
+
+.navbar a {
+    font-size: 18px;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: bolder;
+    margin-left: 35px;
+    transition: .3s;
+    opacity: 0;
+    animation: slideTop .5s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+
+.navbar a:hover,
+.navbar a:active {
+    color: #081b29;
+}
+
+.home {
+
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0px 10%;
+}
+
+.home-content {
+    width: 600px;
+}
+
+.home-content h1 {
+    font-size: 56px;
+    font-weight: 700;
+}
+
+.home-content h3 {
+    line-height: 1.2;
+    font-size: 32px;
+    font-weight: 700;
+    color: #00abf0;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: .7s;
+}
+
+.home-content h3:nth-of-type(2) {
+    margin-bottom: 30px;
+    animation: slideTop 1s ease forwards;
+    animation-delay: .7s;
+}
+
+.home-content h3 span {
+    color: #00abf0;
+}
+
+.home-content p {
+    padding-top: 7px;
+    font-size: 16px;
+    font-weight: 300;
+    font-family: sans-serif;
+    height: 3px;
+    margin: 20px 0 40px;
+    line-height: 1.5;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: .1s;
+}
+
+.home-content .btn-box {
+    width: 340px;
+    height: 50px;
+    padding-top: 30px;
+
+}
+
+.btn-box a {
+    position: relative;
+    display: inline-flex;
+    width: 150px;
+    height: 70px;
+    padding-left: 37px;
+    padding-bottom: 20px;
+    padding-top: 22px;
+    text-align: center;
+    background: #00abf0;
+    border: 2px solid #00abf0;
+    border-radius: 7px;
+    font-size: 19px;
+    color: #081b29;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+    overflow: hidden;
+}
+
+.btn-box a:hover {
+    color: #00abf0;
+    box-shadow: 0 0 20px #00abf0;
+}
+
+.btn-box a:nth-child(2) {
+    background: transparent;
+    color: #00abf0;
+    text-align: center;
+    margin-left: 15px;
+    padding-left: 15px;
+    padding-right: 8px;
+    padding-bottom: 15px;
+}
+
+.btn-box a:nth-child(2):hover {
+    color: #081b29;
+    box-shadow: 0 0 20px #00abf0;
+}
+
+.btn-box a:nth-child(2)::before {
+    background: #00abf0;
+}
+
+.btn-box a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #081b29;
+    z-index: -1;
+    transition: .5s;
+
+}
+
+.btn-box a:hover::before {
+    width: 100%;
+}
+
+.home-sci {
+    position: absolute;
+    bottom: 120px;
+    width: 170px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.home-sci a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #00abf0;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #00abf0;
+    text-decoration: none;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s ease;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: calc(.2s *var);
+}
+
+.home-sci a:hover {
+    color: #081b29;
+    background: #00abf0;
+    box-shadow: 0 0 20px #00abf0;
+}
+
+.home-sci a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #00abf0;
+    z-index: -1;
+    transition: .5s;
+}
+
+.home-sci a:hover::before {
+    width: 100%;
+}
+
+.pro {
+    display: inline-flex;
+    position: relative;
+    height: 50vh;
+    width: 50px;
+    padding-right: -50px;
+}
+
+.pro {
+    margin-left: 20%;
+    padding-left: 15px;
+    width: 25%;
+    height: 70vh;
+}
+
+@keyframes slideRight {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideTop {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+
+@keyframes slideBottom {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+.images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 300px;
+    margin-top: 40px;
+    /* Adjust this value as needed */
+}
+
+.images img {
+    border-radius: 50%;
+    width: 500px;
+    /* Adjust the size of the circle as needed */
+    height: 500px;
+    /* Adjust the size of the circle as needed */
+    object-fit: cover;
+    /* Ensure the image covers the circle shape */
+    box-shadow: 0 0 30px #00abf0;
+}
+
+.aboutImg {
+    margin-top: 200px;
+    display: flex;
+    justify-content: left;
+    margin-left: 120px;
+
+}
+
+.aboutImg img {
+    border-radius: 30%;
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    box-shadow: 0 0 30px #00abf0;
+}
+
+.about {
+    margin-top: 15px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 1.5rem;
+    line-height: 1.5;
+  
+}
+
+.aboutText h2 {
+    margin-top: 80px;
+    font-size: 60px;
+    margin-left: -120px;
+}
+
+.aboutText h2 span {
+    color: #00abf0;
+    
+}
+
+.aboutText h4 {
+    font-size: 29px;
+    font-weight: 600;
+    color: #ededed;
+    line-height: 1.7;
+    margin-left: -120px;
+}
+
+.aboutText p {
+    margin-left: -120px;
+    color: aliceblue;
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 4rem;
+}
+
+.aboutText .btn-box {
+    margin-left: -120px;
+    position: relative;
+    display: inline-flex;
+    width: 150px;
+    height: 70px;
+    padding-left: 8px;
+    padding-bottom: 20px;
+    padding-top: 15px;
+    text-align: center;
+    background: #00abf0;
+    border: 2px solid #00abf0;
+    border-radius: 7px;
+    font-size: 19px;
+    color: #081b29;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+    overflow: hidden;
+}
+
+.about .btn-box:hover {
+    color: #00abf0;
+    box-shadow: 0 0 20px #00abf0;
+}
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container1 {
+    width: 600px;
+    height: 500px;
+    padding: 75px 90px;
+    margin-left: 120px;
+}
+
+.heading1 {
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    text-decoration-thickness: 5px;
+    margin-bottom: 50px;
+}
+
+.bar {
+    font-size: 25px;
+}
+
+.Technicle-bars .bar {
+    margin-top: 40px 0;
+}
+
+.Technicle-bars .bar:first-child {
+    margin-top: 0;
+}
+
+.Technicle-bars .bar:last-child {
+    margin-bottom: 0;
+}
+
+.Technicle-bars .bar .info {
+    margin-bottom: 5px;
+}
+
+.Technicle-bars .bar .info span {
+    font-size: 17px;
+    font-weight: 500;
+    animation: showtext 0.5s 1s linear forwards;
+    opacity: 0;
+}
+
+.sub-title {
+    margin-top: 10%;
+    margin-left: 40%;
+    font-size: 60px;
+}
+
+.sub-title span {
+    color: #00abf0;
+}
+
+.Technicle-bars .bar .progress-line {
+    position: relative;
+    border-radius: 10px;
+    width: 100%;
+    height: 5px;
+    background-color: black;
+    animation: animate 1s cubic-bezier(1, 0, 0, 5, 1) forwards;
+    transform: scaleX(0);
+    transform-origin: left;
+
+}
+
+@keyframes animate {
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+.Technicle-bars .bar .progress-line span {
+    height: 100%;
+    background-color: #00abf0;
+    position: absolute;
+    border-radius: 10px;
+    animation: animate 1s 1s cubic-bezier(1, 0, 0, 5, 1) forwards;
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.heading1 {
+    margin-left:40% ;
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    text-decoration-thickness: 5px;
+    margin-bottom: 50px;
+}
+
+.bar {
+    font-size: 25px;
+}
+
+.Technicle-bars .bar {
+    margin-top: 40px 0;
+}
+
+.Technicle-bars .bar:first-child {
+    margin-top: 0;
+}
+
+.Technicle-bars .bar:last-child {
+    margin-bottom: 0;
+}
+
+.Technicle-bars .bar .info {
+    margin-bottom: 5px;
+}
+
+.Technicle-bars .bar .info span {
+    font-size: 17px;
+    font-weight: 500;
+    animation: showtext 0.5s 1s linear forwards;
+    opacity: 0;
+}
+
+.Technicle-bars .bar .progress-line {
+    position: relative;
+    border-radius: 10px;
+    width: 100%;
+    height: 7px;
+    background-color: rgb(8, 8, 8);
+    animation: animate 1s cubic-bezier(1, 0, 0, 5, 1) forwards;
+    transform: scaleX(1);
+    transform-origin: left;
+    margin-bottom: 20px;
+
+}
+
+.Technicle-bars .bar .progress-line span {
+    height: 100%;
+    background-color: #00abf0;
+    position: absolute;
+    border-radius: 10px;
+    animation: animate 1s cubic-bezier(1, 0, 0, 5, 1) forwards;
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.progress-line.html span {
+    width: 90%;
+}
+
+.progress-line.css span {
+    width: 70%;
+}
+
+.progress-line.javascript span {
+    width: 60%;
+}
+
+.progress-line.java span {
+    width: 60%;
+}
+
+@keyframes animate {
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+
+.progress-line span::after {
+    content: attr(data-percent);
+    position: absolute;
+    padding: 1px 5px;
+    background-color: #081b29;
+    color: #ededed;
+    font-size: 12px;
+    border-radius: 3px;
+    top: -28px;
+    right: -30px;
+    animation: shoetext 0.5s 1.5s linear forwards;
+    opacity: 1;
+}
+.progress-line.html span::after {
+    content: "90%";
+}
+
+.progress-line.css span::after {
+    content: "70%";
+}
+
+.progress-line.javascript span::after {
+    content: "60%";
+}
+
+.progress-line.java span::after {
+    content: "60%";
+}
+
+.progress-line span::before{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 7px solid transparent;
+    border-bottom-width:0px;
+    border-right-width:0px;
+    border-top-color:black;
+    top: -10px;
+    right: 0;
+    animation: shoetext 0.5s 1.5s linear forwards;
+    opacity: 1;
+}
+@keyframes showtext{
+    100%{
+        opacity: 1;
+    }
+}
+.radial-bars{
+    width:20%;
+    margin-left: 70%;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+.radial-bars .radial-bars{
+    width: 150%;
+    height: 120px;
+    margin-bottom: 10px;
+    position:relative;
+}
+.radial-bars .radial-bars svg{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) rotate(-90deg);
+    width: 120px;
+    height: 160px;
+
+}
+.radial-bars .radial-bars .progress-bar{
+    stroke-width: 10;
+    stop-color: black;
+    fill: transparent;
+    stroke-dasharray: 502;
+    stroke-dashoffset: 502;
+    stroke-linecap: round;
+    animation: animate-bar 1s linear forwards;
+}
+@keyframes animate-bar{
+    100%{
+        stroke-dashoffset: -1;
+    }
+}
+.path{
+    stroke-width: 10px;
+    stroke: #00abf0;
+    fill: transparent;
+    stroke-dasharray: 502;
+    stroke-dashoffset: 502;
+    stroke-linecap: round;
+}
+.path-1{
+    animation: animate-path1 1s 1s linear forwards;
+}
+.path-2{
+    animation: animate-path2 1s 1s linear forwards;
+}
+.path-3{
+    animation: animate-path3 1s 1s linear forwards;
+}
+.path-4{
+    animation: animate-path4 1s 1s linear forwards;
+}
+@keyframes animate-path1{
+    100%{
+        stroke-dashoffset: 45;
+    }
+}
+
+@keyframes animate-path2{
+    100%{
+        stroke-dashoffset: 70;
+    }
+}
+
+@keyframes animate-path3{
+    100%{
+        stroke-dashoffset: 125;
+    }
+}
+
+@keyframes animate-path4{
+    100%{
+        stroke-dashoffset: 60;
+    }
+}
+.radial-bars .percentage {
+    position:relative;
+    top: 50%;
+    left: 20%;
+    transform: translate(-40%,-230%);
+    font-size: 17px;
+    font-weight: 500;
+    animation: showtext 1s linear forwards;
+    opacity: 0;
+    color: #ededed;
+}
+
+.radial-bars .text{
+width:100%;
+position:relative;
+left: -9ch;
+top:-13vh;
+transform: translateZ(-50px,-180%);
+font-size: 17px;
+font-weight: 500;
+animation:showtext 0.5s 1s linear forwards;
+}
+@keyframes showtext{
+    100%{
+        opacity: 1;
+    }
+}
